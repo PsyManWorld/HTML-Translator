@@ -345,9 +345,22 @@ nav.main-menu li.active>a,
     font-weight: bold;
 }
 
+.modal-footer {
+    text-align: center !important;
+}
+
 .close:hover,
 .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+
+.modal-content {
+    direction: rtl;
+}
+
+.modal-header .close {
+    margin-top: -2px;
+    display: none;
 }
