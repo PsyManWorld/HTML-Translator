@@ -40,6 +40,7 @@ header {
     z-index: 0;
     transition: 1s;
     background-color: transparent;
+    margin: 10px 0;
 }
 
 .divchange::before,
@@ -57,7 +58,7 @@ header {
 }
 
 .divchange::after {
-    width: 150px;
+    width: 100px;
     height: 30px;
 }
 
@@ -71,19 +72,23 @@ header {
 }
 
 .divchange:hover::before {
-    width: 0px;
+    width: 0;
     background: #fff;
 }
 
 .divchange:hover::after {
-    height: 0px;
+    height: 0;
     background: #fff;
 }
 
 .divchange:hover {
     background: #fff;
 }
-
+.modal-body select{
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
 .fa {
     position: relative;
     display: table-cell;

@@ -22,136 +22,138 @@
 
 <body>
 <!-- my comment -->
-    <header dir="rtl">
-        <div class="area"></div>
-        <nav class="main-menu">
-            <ul>
-                <li>
-                    <a href="http://justinfarrow.com">
-                        <i class="fa fa-home fa-2x"></i>
-                        <span class="nav-text">
+<header dir="rtl">
+    <div class="area"></div>
+    <nav class="main-menu">
+        <ul>
+            <li>
+                <a href="http://justinfarrow.com">
+                    <i class="fa fa-home fa-2x"></i>
+                    <span class="nav-text">
                     صفحه اصلی
                 </span>
-                    </a>
+                </a>
 
-                </li>
-                <li class="has-subnav">
-                    <a href="#">
-                        <i class="fa fa-solid fa-address-card fa-2x"></i>
-                        <span class="nav-text">
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-solid fa-address-card fa-2x"></i>
+                    <span class="nav-text">
                         درباره ما
                 </span>
-                    </a>
+                </a>
 
-                </li>
-                <li class="has-subnav">
-                    <a href="#">
-                        <i class="fa fa-solid fa-phone fa-2x"></i>
-                        <span class="nav-text">
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-solid fa-phone fa-2x"></i>
+                    <span class="nav-text">
                     تماس با ما
                 </span>
-                    </a>
+                </a>
 
-                </li>
-                <li class="has-subnav">
-                    <a href="#">
-                        <i class="fa fa-solid fa-code fa-2x"></i>
-                        <span class="nav-text">
+            </li>
+            <li class="has-subnav">
+                <a href="#">
+                    <i class="fa fa-solid fa-code fa-2x"></i>
+                    <span class="nav-text">
                     فروش API
                 </span>
-                    </a>
+                </a>
 
-                </li>
+            </li>
 
-                <li>
-                    <a href="#">
-                        <i class="fa fa-solid fa-language fa-2x"></i>
-                        <span class="nav-text">
+            <li>
+                <a href="#">
+                    <i class="fa fa-solid fa-language fa-2x"></i>
+                    <span class="nav-text">
                    خدمات ترجمه حرفه ای
                 </span>
-                    </a>
-                </li>
+                </a>
+            </li>
 
-                <li>
-                    <a href="#">
-                        <i class="fa fa-solid fa-file-lines fa-2x"></i>
-                        <span class="nav-text">
+            <li>
+                <a href="#">
+                    <i class="fa fa-solid fa-file-lines fa-2x"></i>
+                    <span class="nav-text">
                     مستندات
                 </span>
-                    </a>
-                </li>
-            </ul>
+                </a>
+            </li>
+        </ul>
 
-            <ul class="logout">
-                <li>
-                    <a href="#">
-                        <i class="fa fa-power-off fa-2x"></i>
-                        <span class="nav-text">
+        <ul class="logout">
+            <li>
+                <a href="#">
+                    <i class="fa fa-power-off fa-2x"></i>
+                    <span class="nav-text">
                     Logout
                 </span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-    <main>
+<main>
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
 
-        <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-
-                <!-- Modal content-->
-                <div class="modal-content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="from">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">انتخاب زبان مبدا</h4>
                     </div>
                     <div class="modal-body">
-                        <button class="Farsi1" onclick="farsi1()">فارسی</button>
-                        <button class="English1" onclick="english1()">انگلیسی</button>
+                        <select>
+                            <option class="Farsi1" onclick="farsi1()">فارسی</option>
+                            <option class="English1" onclick="english1()">انگلیسی</option>
+                        </select>
                     </div>
+                </div>
+                <div class="to">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                         <h4 class="modal-title">انتخاب زبان مقصد</h4>
                     </div>
                     <div class="modal-body">
-                        <button class="Farsi2" onclick="farsi2()">فارسی</button>
-                        <button class="English2" onclick="english2()">انگلیسی</button>
+                        <select>
+                            <option class="Farsi2" onclick="farsi2()">فارسی</option>
+                            <option class="English2" onclick="english2()">انگلیسی</option>
+                        </select>
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
-                    </div>
                 </div>
-
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">بستن</button>
+                </div>
             </div>
-        </div>
-
-        
-
-
-
-        <div class="maintexteara">
-
-            <input class="firsttexterea" type="texterea">
-        
-            <div class="lang-icons">
-                
-                <div class="langli">
-                    <i class="fa-solid fa-globe" data-toggle="modal" data-target="#myModal"></i>
-                </div>
-                <div class="divchange">
-                    <img class="changebtn" src="./img/couple-of-arrows-changing-places.png" width="30" height="30">
-                </div>
-            
-            </div>
-            <input class="secondtexterea" type="texterea">
 
         </div>
+    </div>
 
-    </main>
+    <div class="maintexteara">
 
+        <input class="firsttexterea" type="texterea">
+        
+        <div class="lang-icons">
+
+            <div class="langli">
+                <i class="fa-solid fa-globe" data-toggle="modal" data-target="#myModal"></i>
+            </div>
+            <div class="divchange">
+                <img class="changebtn" src="./img/couple-of-arrows-changing-places.png" width="30" height="30">
+            </div>
+
+        </div>
+        <input class="secondtexterea" type="texterea">
+
+    </div>
+
+</main>
 
 </body>
 
