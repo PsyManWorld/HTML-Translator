@@ -84,11 +84,13 @@ header {
 .divchange:hover {
     background: #fff;
 }
-.modal-body select{
+
+.modal-body select {
     padding: 5px 10px;
     font-size: 18px;
     font-weight: 500;
 }
+
 .fa {
     position: relative;
     display: table-cell;
@@ -99,6 +101,8 @@ header {
     /* font-size: 20px !important; */
 }
 
+option,
+select,
 h1,
 p,
 h2,
@@ -257,7 +261,6 @@ nav.main-menu li.active>a,
     justify-content: center;
     width: 90%;
     gap: 20px;
-    
 }
 
 .btntrs {
@@ -281,12 +284,13 @@ nav.main-menu li.active>a,
     align-items: center;
 }
 
-.lang-icons{
+.lang-icons {
     gap: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
 .langli {
     display: flex;
     justify-content: center;
