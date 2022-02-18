@@ -59,10 +59,11 @@ button {
 nav.main-menu.expanded {
     width: 250px;
     overflow: visible;
+    background: black;
 }
 
 .main-menu {
-    background: black;
+    background: #00000038;
     border-right: 1px solid #e5e5e5;
     position: absolute;
     top: 0;
@@ -224,7 +225,7 @@ nav.main-menu li.active>a,
 }
 
 .lang-icons {
-    gap: 100px;
+    gap: 17px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -233,20 +234,24 @@ nav.main-menu li.active>a,
 .langli {
     display: flex;
     justify-content: center;
+    flex-direction: column-reverse;
+    align-items: center;
 }
 
 .language {
     margin-top: 10px;
 }
 
-.fa-globe {
+.fa-earth-americas {
     cursor: pointer;
-    font-size: 50px;
+    font-size: 60px;
     transition: 0.5s;
+    color: #000;
 }
 
-.fa-globe:hover {
-    color: red;
+.fa-earth-americas:hover {
+    color: #fff;
+    transform: rotate(180deg);
 }
 
 @font-face {
@@ -327,7 +332,7 @@ nav.main-menu li.active>a,
     left: 0px;
     top: 0px;
     z-index: -1;
-    filter: blur(5px);
+    filter: brightness(0.8);
 }
 
 .a-nav .a-ul {
@@ -337,10 +342,11 @@ nav.main-menu li.active>a,
 }
 
 .a-nav .a-ul .a-li {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    --c: goldenrod;
+    --c: rgb(0, 0, 0);
     color: var(--c);
     font-size: 16px;
     border: 0.3em solid var(--c);
@@ -374,7 +380,8 @@ nav.main-menu li.active>a,
 }
 
 .a-nav .a-ul .a-li:hover {
-    color: black;
+    color: rgb(255, 255, 255);
+    transform: rotate(180deg);
 }
 
 .a-nav .a-ul .a-li:hover span {
@@ -401,4 +408,9 @@ nav.main-menu li.active>a,
 .fa-sync-alt:before {
     content: "\f2f1";
     font-size: 30px;
+}
+
+.langspan {
+    font-size: 18px;
+    color: black;
 }
