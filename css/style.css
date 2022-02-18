@@ -9,7 +9,7 @@ body {
 }
 
 main {
-    margin-top: 200px;
+    margin-top: 6%;
     display: flex !important;
     justify-content: center;
     /* height: 100vh; */
@@ -46,7 +46,7 @@ header {
 .divchange::before,
 .divchange::after {
     position: absolute;
-    background: white;
+    background: transparent;
     z-index: -1;
     transition: 1s;
     content: '';
@@ -72,17 +72,20 @@ header {
 }
 
 .divchange:hover::before {
-    width: 0;
-    background: #fff;
+    width: 0px;
+    background: transparent;
 }
 
 .divchange:hover::after {
-    height: 0;
-    background: #fff;
+    height: 0px;
+    background: transparent;
 }
 
 .divchange:hover {
-    background: #fff;
+    background: transparent;
+    border-radius: 0.5rem;
+    border-color: white;
+    border-width: 5px;
 }
 
 .modal-body select {
@@ -379,4 +382,81 @@ nav.main-menu li.active>a,
 .modal-header .close {
     margin-top: -2px;
     display: none;
+}
+.BackGroundimg
+{
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+
+
+.a-nav .a-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.a-nav .a-ul .a-li {
+    --c: goldenrod;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 12em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+}
+
+.a-nav .a-ul .a-li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.a-nav .a-ul .a-li:hover {
+    color: black;
+}
+
+.a-nav .a-ul .a-li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.a-nav .a-ul .a-li span:nth-child(1) {
+    --n: 1;
+}
+
+.a-nav .a-ul .a-li span:nth-child(2) {
+    --n: 2;
+}
+
+.a-nav .a-ul .a-li span:nth-child(3) {
+    --n: 3;
+}
+
+.a-nav .a-ul .a-li span:nth-child(4) {
+    --n: 4;
 }
