@@ -137,9 +137,12 @@
 
         <div class="maintexteara">
 
-            <input class="secondtexterea" type="texterea" readonly>
+            <div class="divtext1">
+                <p class="p-secondtexterea">زبان مقصد: انگلیسی</p>
 
-            <div class="lang-icons">
+                <textarea class="secondtexterea" type="texterea" rows="4" cols="1" readonly></textarea>
+            </div>
+            <div>
 
                 <div class="langli">
                     <i class="fa-solid fa-earth-americas" data-toggle="modal" data-target="#myModal"></i>
@@ -159,10 +162,16 @@
                 </div>
 
             </div>
-            <input class="firsttexterea" type="texterea" onchange="textchange()" onkeydown="textchange()">
+            <div class="divtext2">
+                <p class="p-firsttexterea">زبان مبدا: فارسی</p>
+                <textarea class="firsttexterea" type="texterea" onchange="textchange()" onkeydown="textchange()" rows="4" cols="1"></textarea>
+
+            </div>
 
         </div>
         <img class="BackGroundimg" src="./img/worldmap-vintage.jpg">
+
+
     </main>
     <footer>
         <script src="./js/footer.js"></script>
