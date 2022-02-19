@@ -59,3 +59,10 @@ function selectlang2() {
 function textchange() {
     document.querySelector(".secondtexterea").value = document.querySelector(".firsttexterea").value;
 }
+
+function height() {
+
+    document.querySelector(".firsttexterea").style.height = "200px"
+    document.querySelector(".secondtexterea").style.height = "200px"
+
+}
