@@ -180,6 +180,8 @@ nav.main-menu li.active>a,
 .firsttexterea,
 .secondtexterea {
     width: 100%;
+    max-width: 500px;
+    overflow: scroll;
     border: 2px solid black;
     border-radius: 0.5rem;
     font-family: "dana";
@@ -188,20 +190,8 @@ nav.main-menu li.active>a,
     padding: 10px 34px;
     resize: none;
     transition: 0.5s;
+    background-color: white;
 }
-
-
-/* .firsttexterea:focus,
-.secondtexterea:focus {
-    width: 100%;
-    border: 2px solid black;
-    border-radius: 0.5rem;
-    font-family: "dana";
-    font-size: 30px;
-    height: 400px;
-    padding: 10px 34px;
-    resize: none;
-} */
 
 .maintexteara {
     display: flex;
