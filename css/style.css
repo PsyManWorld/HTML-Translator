@@ -180,7 +180,7 @@ nav.main-menu li.active>a,
 .firsttexterea,
 .secondtexterea {
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
     overflow: scroll;
     border: 2px solid black;
     border-radius: 0.5rem;
