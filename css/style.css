@@ -177,8 +177,8 @@ nav.main-menu li.active>a,
     height: 100%;
 }
 
-.firsttexterea,
-.secondtexterea {
+.first-textarea,
+.second-textarea {
     width: 100%;
     max-width: 100%;
     overflow: scroll;

@@ -63,26 +63,24 @@ function selectlang2() {
 }
 
 function textchange() {
-  document.querySelector(".secondtexterea").textContent =
-    document.querySelector(".firsttexterea").textContent;
-  var k = 1;
-  var text = "";
-  let text1 = document.querySelector(".firsttexterea").textContent;
+  document.querySelector(".second-textarea").textContent =
+    document.querySelector(".first-textarea").textContent;
+  let text1 = document.querySelector(".first-textarea").textContent;
    
 
   const myArray = text1.split(" ");
   myArray.forEach(myFunction);
 
   function myFunction(items) {
-    let p = document.createElement("span");
-    let b = document.createElement("span");
-    p.setAttribute("class", "discritText");
+    let wordSpan = document.createElement("span");
+    let spaceSpan = document.createElement("span");
+    wordSpan.setAttribute("class", "discritText");
 
-    p.innerHTML = items;
-    b.innerHTML = " ";
+    wordSpan.innerHTML = items;
+    spaceSpan.innerHTML = " ";
 
-    document.querySelector(".firsttexterea").append(p);
-    document.querySelector(".firsttexterea").append(b);
+    document.querySelector(".firsttexterea").append(wordSpan);
+    document.querySelector(".firsttexterea").append(spaceSpan);
   }
 }
 
