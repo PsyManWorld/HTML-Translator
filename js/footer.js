@@ -1,91 +1,133 @@
-
-document.querySelector(".lang-select1").value = "fa";
-document.querySelector(".first-textarea").style.textAlign = "right";
+const firstTextarea = document.querySelector(".first-textarea");
+const secondTextarea = document.querySelector(".second-textarea");
+const firstTextareaP = document.querySelector(".p-first-textarea");
+const secondTextareaP = document.querySelector(".p-second-textarea");
+const langSelect = document.querySelector(".lang-select1");
+langSelect.value = "fa";
+firstTextarea.style.textAlign = "right";
 document.querySelector(".lang-select2").value = "en";
 
 function selectLang1() {
-  const x = document.querySelector(".lang-select1").value;
-  document.querySelector(".first-textarea").setAttribute("id", x);
-  switch (x) {
-    case "fa":
-      document.querySelector(".lang-select2 .fa").style.display = "none";
-      document.querySelector(".lang-select2 .en").style.display = "block";
-      document.querySelector(".lang-select2").value = "en";
-      document.querySelector(".first-textarea").style.textAlign = "right";
-      document.querySelector(".p-first-textarea").innerHTML = "زبان مبدا: فارسی";
-      document.querySelector(".p-second-textarea").innerHTML =
-        "زبان مقصد: انگلیسی";
-      break;
+    const x = langSelect.value;
+    firstTextarea.setAttribute("id", x);
+    switch (x) {
+        case "fa":
+            document.querySelector(".lang-select2 .fa").style.display = "none";
+            document.querySelector(".lang-select2 .en").style.display = "block";
+            document.querySelector(".lang-select2").value = "en";
+            firstTextarea.style.textAlign = "right";
+            firstTextareaP.innerHTML = "زبان مبدا: فارسی";
+            secondTextareaP.innerHTML =
+                "زبان مقصد: انگلیسی";
+            break;
 
-    case "en":
-      document.querySelector(".lang-select2 .fa").style.display = "block";
-      document.querySelector(".lang-select2 .en").style.display = "none";
-      document.querySelector(".lang-select2").value = "fa";
-      document.querySelector(".first-textarea").style.textAlign = "left";
-      document.querySelector(".p-first-textarea").innerHTML =
-        "زبان مبدا: انگلیسی";
-      document.querySelector(".p-second-textarea").innerHTML =
-        "زبان مقصد: فارسی";
+        case "en":
+            document.querySelector(".lang-select2 .fa").style.display = "block";
+            document.querySelector(".lang-select2 .en").style.display = "none";
+            document.querySelector(".lang-select2").value = "fa";
+            firstTextarea.style.textAlign = "left";
+            firstTextareaP.innerHTML =
+                "زبان مبدا: انگلیسی";
+            secondTextareaP.innerHTML =
+                "زبان مقصد: فارسی";
 
-      break;
-    default:
-    //Nothing
-  }
+            break;
+        default:
+        //Nothing
+    }
 }
 
 function selectLang2() {
-  var x = document.querySelector(".lang-select2").value;
-  document.querySelector(".second-textarea").setAttribute("id", x);
-  switch (x) {
-    case "fa":
-      document.querySelector(".lang-select1 .fa").style.display = "none";
-      document.querySelector(".lang-select1 .en").style.display = "block";
-      document.querySelector(".lang-select1").value = "en";
-      document.querySelector(".second-textarea").style.textAlign = "right";
-      document.querySelector(".p-first-textarea").innerHTML =
-        "زبان مبدا: انگلیسی";
-      document.querySelector(".p-second-textarea").innerHTML =
-        "زبان مقصد: فارسی";
-      break;
+    let x = document.querySelector(".lang-select2").value;
+    secondTextarea.setAttribute("id", x);
+    switch (x) {
+        case "fa":
+            document.querySelector(".lang-select1 .fa").style.display = "none";
+            document.querySelector(".lang-select1 .en").style.display = "block";
+            langSelect.value = "en";
+            secondTextarea.style.textAlign = "right";
+            firstTextareaP.innerHTML =
+                "زبان مبدا: انگلیسی";
+            secondTextareaP.innerHTML =
+                "زبان مقصد: فارسی";
+            break;
 
-    case "en":
-      document.querySelector(".lang-select1 .fa").style.display = "block";
-      document.querySelector(".lang-select1 .en").style.display = "none";
-      document.querySelector(".lang-select1").value = "fa";
-      document.querySelector(".second-textarea").style.textAlign = "left";
-      document.querySelector(".p-first-textarea").innerHTML = "زبان مبدا: فارسی";
-      document.querySelector(".p-second-textarea").innerHTML =
-        "زبان مقصد: انگلیسی";
-      break;
-    default:
-    //Nothing
-  }
+        case "en":
+            document.querySelector(".lang-select1 .fa").style.display = "block";
+            document.querySelector(".lang-select1 .en").style.display = "none";
+            langSelect.value = "fa";
+            secondTextarea.style.textAlign = "left";
+            firstTextareaP.innerHTML = "زبان مبدا: فارسی";
+            secondTextareaP.innerHTML =
+                "زبان مقصد: انگلیسی";
+            break;
+        default:
+        //Nothing
+    }
 }
 
+
+firstTextarea.addEventListener('keyup', textChange)
+
+let myArray = [];
+let text;
+let tempDiv = document.createElement("spam");
+let myArrayLength = 1;
+
 function textChange() {
-  document.querySelector(".second-textarea").textContent =
-    document.querySelector(".first-textarea").textContent;
-  let text1 = document.querySelector(".first-textarea").textContent;
-   
+    text = firstTextarea.textContent;
 
-  const myArray = text1.split(" ");
-  myArray.forEach(myFunction);
+    myArray = text.split(" ");
+    console.log('text: ', text)
+    // console.log(myArray)
 
-  function myFunction(items) {
-    let wordSpan = document.createElement("span");
-    let spaceSpan = document.createElement("span");
-    wordSpan.setAttribute("class", "discrete-text");
 
-    wordSpan.innerHTML = items;
-    spaceSpan.innerHTML = " ";
+    myArray.forEach(myFunction);
 
-    document.querySelector(".first-textarea").append(wordSpan);
-    document.querySelector(".first-textarea").append(spaceSpan);
-  }
+    function myFunction(item) {
+        let wordSpan = document.createElement("span");
+        let spaceSpan = document.createElement("span");
+        wordSpan.setAttribute("class", "discrete-text");
+        wordSpan.innerHTML = item;
+        spaceSpan.innerHTML = " ";
+
+    }
+
+    function addNewWordToDiv() {
+        tempDiv.innerHTML = '';
+        myArray.forEach(function (item) {
+            let wordSpan = document.createElement("span");
+            let spaceSpan = document.createElement("span");
+            wordSpan.setAttribute("class", "discrete-text");
+            console.log('in the func: ', item)
+            wordSpan.innerHTML = item;
+            spaceSpan.innerHTML = " ";
+            tempDiv.append(wordSpan);
+            tempDiv.append(spaceSpan);
+        });
+        myArrayLength = myArray.length;
+    }
+
+    console.log('myArr: ', myArray)
+    // if (myArray.length > myArrayLength) {
+    //
+    //     addNewWordToDiv()
+    // } else if (text[text.length - 1] === ' ') {
+    //     console.log('last word is space')
+    //     addNewWordToDiv()
+    // }else{
+    //     addNewWordToDiv()
+    // }
+    addNewWordToDiv()
+    console.log(tempDiv)
+    console.log(text[text.length - 1])
+    // firstTextarea.innerHTML='';
+    // firstTextarea.innerHTML = tempDiv.innerHTML
+    secondTextarea.textContent = firstTextarea.textContent;
 }
 
 function height() {
-  document.querySelector(".first-textarea").style.height = "200px";
-  document.querySelector(".second-textarea").style.height = "200px";
+    firstTextarea.style.height = "200px";
+    secondTextarea.style.height = "200px";
 }
 

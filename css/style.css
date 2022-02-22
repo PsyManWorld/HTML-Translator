@@ -407,3 +407,7 @@ nav.main-menu li.active>a,
     font-size: 30px !important;
     color: black;
 }
+
+#text1 span{
+    unicode-bidi: bidi-override;
+}
