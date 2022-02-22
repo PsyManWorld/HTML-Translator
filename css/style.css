@@ -409,6 +409,3 @@ nav.main-menu li.active > a,
   color: black;
 }
 
-#text1 span{
-    unicode-bidi: bidi-override;
-}
